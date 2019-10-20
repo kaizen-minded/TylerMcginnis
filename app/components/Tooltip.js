@@ -24,16 +24,13 @@ const styles = {
     }
   }
 
-class Tooltip extends React.Component{
-    render() {
-        const { text, children, hovering } = this.props
-        return (
-            <div style={styles.container}>
-                {hovering === true && <div style={styles.tooltip}>{text}</div>}
-                {children}
-            </div>
-        )
-    }
+function Tooltip ({text, children, hovering }){
+    return (
+        <div style={styles.container}>
+            {hovering === true && <div style={styles.tooltip}>{text}</div>}
+            {children}
+        </div>
+    )
   }
 
 Tooltip.propTypes = {
